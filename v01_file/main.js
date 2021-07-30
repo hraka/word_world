@@ -18,6 +18,10 @@ function templateHTML(title, list, body) {
 
       ${list}
       <a href="/create">create</a>
+      <form action="delete_process" method="post">
+        <input type="hidden" name="id" value="${title}">
+        <input type="submit" value="delete">
+      </form>
       ${body}
 
     </body>
@@ -113,6 +117,27 @@ var app = http.createServer(function(request,response){
       fs.writeFile(`data/${title}`, description, 'utf8',
       function(err){
         response.writeHead(302, {Location: `/?id=${qs.escape(title)}`}); //다른 곳으로 일시적 리다이렉.
+        response.end();
+      })
+    });
+
+  }
+
+  else if(pathname === '/delete_process') {
+    var body = '';
+
+    //이벤트. 데이터를 가져올 수도 있고, 정보를 객체화 할 수도 있다.
+    request.on('data', function(data){ //정보가 조각조각 들어올
+      body = body + data;
+
+      //보안장치로 body가 너무 크면 연결을 끊을 수도 있다.
+    });
+    request.on('end', function(){
+      var post = qs.parse(body);
+      var id = post.id;
+
+      fs.unlink(`data/${id}`, function(error){
+        response.writeHead(302, {Location: `/`}); //다른 곳으로 일시적 리다이렉.
         response.end();
       })
     });
