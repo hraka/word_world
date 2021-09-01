@@ -33,7 +33,7 @@
 
 ## 참고
 
-오픈튜토리얼스 Node.js
+- 오픈튜토리얼스 Node.js
 https://opentutorials.org/course/3332
-오픈튜토리얼스 Node.js - MySQL
+- 오픈튜토리얼스 Node.js - MySQL
 https://opentutorials.org/course/3347
