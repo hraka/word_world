@@ -1,7 +1,7 @@
 # word_world
 
 `node.js`가 웹서버로 동작한다.
-mysql 모듈을 설치하였다.
+`mysql` 모듈을 설치하였다.
 
 
 ## 실행 환경 구성
