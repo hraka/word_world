@@ -13,3 +13,5 @@
 
 data/
 connect.js
+example.sql
+lib/db.js
