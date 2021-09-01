@@ -12,3 +12,4 @@
 #doc/**/*.pdf
 
 data/
+connect.js
