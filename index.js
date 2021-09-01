@@ -1,21 +1,22 @@
 var http = require('http');
-var fs = require('fs');
-var url = require('url'); //요구한다. url이라는 nodejs의 모듈.
-var qs = require('querystring');
-var template = require('./lib/template.js')
-var mysql = require('mysql');
-var connect = require('connect.js');
+//var fs = require('fs');
+//var url = require('url'); //요구한다. url이라는 nodejs의 모듈.
+//var qs = require('querystring');
+//var template = require('./lib/template.js')
+//var mysql = require('mysql');
+// var connect = require('connect.js');
 
-var connectInfo = connect.connectInfo;
-console.log(connectInfo);
+// var connectInfo = connect.connectInfo;
+// console.log(connectInfo);
+
+
 //var db = mysql.createConnection(connectInfo);
 
 
-// var app = http.createServer(function(request,response){
-//   var _url = request.url;
-//   var queryData = url.parse(_url, true).query;
-//   var pathname = url.parse(_url, true).pathname;
-//   var title = queryData.id;
+var app = http.createServer(function(request,response){
+  response.writeHead(200); //파일을 성공적으로 전송했다.
+  response.end(hi);
+}
 
 //   if(pathname === '/') {
 //     if(queryData.id === undefined) {
@@ -119,5 +120,5 @@ console.log(connectInfo);
 //     response.end('Not found');
 //   }
 
-});
+//});
 app.listen(3000);
