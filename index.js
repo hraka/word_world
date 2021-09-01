@@ -1,6 +1,7 @@
 var http = require('http');
 var url = require('url'); //요구한다. url이라는 nodejs의 모듈.
 var word = require('./lib/word');
+var meaning = require('./lib/meaning');
 
 
 
@@ -26,7 +27,18 @@ var app = http.createServer(function(request,response){
     word.update_process(request, response);
   } else if(pathname === '/delete_process') {
     word.delete(request, response);
+  } else if(pathname === '/createMeaning') {
+    meaning.createMeaning(request, response);
+  } else if(pathname === '/createMeaning_process') {
+    meaning.createMeaning_process(request, response);
+  } else if(pathname === '/updateMeaning') {
+    meaning.updateMeaning(request, response);
+  } else if(pathname === '/updateMeaning_process') {
+    meaning.updateMeaning_process(request, response);
+  } else if(pathname === '/deleteMeaning_process') {
+    meaning.deleteMeaning(request, response);
   }
+  
   else {
     response.writeHead(404); //404: 파일을 찾을 수 없다.
     response.end('Not found');
