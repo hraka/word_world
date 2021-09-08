@@ -37,9 +37,7 @@ var app = http.createServer(function(request,response){
     meaning.updateMeaning_process(request, response);
   } else if(pathname === '/deleteMeaning_process') {
     meaning.deleteMeaning(request, response);
-  }
-  
-  else {
+  } else {
     response.writeHead(404); //404: 파일을 찾을 수 없다.
     response.end('Not found');
   }
