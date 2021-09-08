@@ -25,7 +25,7 @@
 `show databases;`
 `use ~;`
 
-### 생성기
+### DB 수정
 
 `ALTER TABLE table_name ADD COLUMN ex_column varchar(32) NOT NULL;`
 
