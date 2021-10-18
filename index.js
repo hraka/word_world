@@ -7,6 +7,7 @@ var world = require('./lib/world');
 
 
 
+
 var app = http.createServer(function(request,response){
   var _url = request.url;
   var queryData = url.parse(_url, true).query;
@@ -44,6 +45,8 @@ var app = http.createServer(function(request,response){
     author.home(request, response);
   } else if(pathname === '/world') {
     world.home(request, response);
+  } else if(pathname === '/world_create_process') {
+    world.create_process(request, response);
   } else {
     
     
