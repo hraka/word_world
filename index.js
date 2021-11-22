@@ -15,7 +15,8 @@ var app = http.createServer(function(request,response){
 
   if(pathname === '/') {
     if(queryData.id === undefined) {
-      word.home(request, response);
+      //word.home(request, response);
+      word.all(request, response);
     } else {
       word.word(request, response);
     }
