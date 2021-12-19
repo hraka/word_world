@@ -15,8 +15,8 @@ var app = http.createServer(function(request,response){
 
   if(pathname === '/') {
     if(queryData.id === undefined) {
-      //word.home(request, response);
-      word.all(request, response);
+      word.home(request, response);
+      //word.all(request, response);
     } else {
       word.word(request, response);
     }
@@ -50,6 +50,8 @@ var app = http.createServer(function(request,response){
     world.create_process(request, response);
   } else if(pathname === '/world_select_process') {
     world.select_process(request, response);
+  } else if(pathname === '/change_onoff') {
+    meaning.changeOnOFF(request, response);
   } else {
     response.writeHead(404); //404: 파일을 찾을 수 없다.
     response.end('Not found');
