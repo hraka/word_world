@@ -20,6 +20,10 @@ var app = http.createServer(function(request,response){
     } else {
       word.word(request, response);
     }
+  } else if(pathname === '/edit_issues') {
+    word.homeIssueChange(request, response);
+  } else if(pathname === '/update_issue_process') {
+    word.update_issue_process(request, response);
   } else if(pathname === '/all') {
     word.all(request, response);
   } else if(pathname === '/create') {
