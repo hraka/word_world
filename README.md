@@ -1,3 +1,7 @@
+# Git
+
+한글 커밋은 https://blog2.deliwind.com/20200316/%EC%98%AC%EB%B0%94%EB%A5%B8-commit-%EB%A9%94%EC%84%B8%EC%A7%80%EB%A5%BC-%EC%9E%91%EC%84%B1%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95/ 블로그 글을 참고하여 작성한다.
+
 # word_world
 
 `node.js`가 웹서버로 동작한다.
